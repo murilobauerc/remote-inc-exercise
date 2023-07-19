@@ -22,12 +22,12 @@ defmodule BeExerciseWeb.ConnCase do
       # The default endpoint for testing
       @endpoint BeExerciseWeb.Endpoint
 
-      use BeExerciseWeb, :verified_routes
-
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
       import BeExerciseWeb.ConnCase
+
+      alias BeExerciseWeb.Router.Helpers, as: Routes
     end
   end
 

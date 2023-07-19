@@ -10,6 +10,9 @@ import Config
 config :be_exercise,
   ecto_repos: [BeExercise.Repo]
 
+# Configures the mailer library
+config :be_exercise, BeExercise.Clients.Emailer, client: BEChallengex
+
 # Configures the endpoint
 config :be_exercise, BeExerciseWeb.Endpoint,
   url: [host: "localhost"],

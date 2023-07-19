@@ -21,7 +21,7 @@ defmodule BeExerciseWeb do
 
   def router do
     quote do
-      use Phoenix.Router, helpers: false
+      use Phoenix.Router
 
       # Import common connection and controller functions to use in pipelines
       import Plug.Conn
@@ -44,8 +44,7 @@ defmodule BeExerciseWeb do
 
       import Plug.Conn
       import BeExerciseWeb.Gettext
-
-      unquote(verified_routes())
+      alias BeExerciseWeb.Router.Helpers, as: Routes
     end
   end
 
