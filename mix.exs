@@ -32,19 +32,30 @@ defmodule BeExercise.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      # Phoenix dependencies
       {:phoenix, "~> 1.7.2"},
       {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.6"},
-      {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 3.3"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.18.16"},
       {:phoenix_live_dashboard, "~> 0.7.2"},
+
+      # Ecto dependencies
+      {:ecto_sql, "~> 3.6"},
+      {:postgrex, ">= 0.0.0"},
+      {:ecto_enum, "~> 1.4"},
+
+      # Observability dependencies
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 1.0"},
+
+      # General dependencies
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
+      {:faker, "~> 0.17.0"},
+
+      # Client
       {:be_challengex, github: "remotecom/be_challengex", tag: "0.0.1"}
     ]
   end
